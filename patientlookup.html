@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Patient Lookup</title>
+  <meta charset="utf-8">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/78fc201897.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+	<link href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+  <script src= "https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity= sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src= "https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity= "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+	</script>
+  <script src= "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js">
+	</script>
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity= "sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+		crossorigin="anonymous">
+	</script>
+	<script>
+     $(function () {
+      $("#datepick").datepicker();
+      });
+  $('.pagination-inner a').on('click', function() {
+		$(this).siblings().removeClass('pagination-active');
+		$(this).addClass('pagination-active');
+  });
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+  </script>
+<style> 
+h1 {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #553739;
+    text-transform: uppercase;
+  }
+.container-fluid {
+  padding: 60px 50px;
+}
+.margin {
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+    .bg-3 { 
+    background-color: #553739; /* Dark Liver Horse */
+    color: #F1b498;
+  }
+  .bg-4 { 
+    background-color: #955e42; /* Brown Sugar */
+    color: #F1b498
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 15px;
+    letter-spacing: 5px;
+    background-color:  #553739;
+    color: #EC9070;
+  }
+.navbar .li {
+  border: 1px solid #6f1a07;
+  background-color: #4d1e10;
+  color: #2FC284;
+}		
+.navbar-link{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 16px;
+    line-height: 1.42857;
+    margin-right: 5px;
+    padding: 10px 17px;
+    position: relative;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    color: #2FC284;
+    cursor: pointer;
+}
+.btn {
+  padding: 5px;
+  background-color: #C5A49B;
+    color: #57393B;
+  border-color: #2FC284;
+  border-radius: 3px;
+  transition: .2s;
+  font-size: x-large;
+}
+.btn:hover > a {
+ color: #57393B;
+}
+#myInput {
+    margin-left: 15%;
+     
+}
+input[type=text] {
+  width: 130px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+input[type=text]:focus {
+  width: 75%;
+}
+  table {
+  margin: 50px;
+  color:  #4A2913;
+  background-color: #ecded5; 
+}
+thead{
+  text-align: center;
+    font-size:large;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    background-color: #C5A49B;
+    color: #57393B;
+}
+th {
+    text-align: center;
+    font-size:large;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    background-color: #C5A49B;
+    color: #57393B;
+}
+td {                                      padding:10px;                  
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: large;
+}
+.pag-link {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px;
+}
+.pag-link.disabled > span,
+.pag-link.current > span,
+.pag-link > a{
+    display: block;
+    border-radius: 50%;
+    font-size: 16px;
+    line-height: 1.42857;
+    margin-right: 5px;
+    padding: 10px 17px;
+    position: relative;
+    text-decoration: none;
+    border: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.pag-link:active > a,
+.pag-link:hover > a,
+.pag-link:focus > a,
+.pag-link.current > span{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+.pag-link > a{
+    background-color: #F1b498;
+    color: #553739;
+    cursor: pointer;
+}
+.pag-link.disabled > span,
+.pag-link.current > span{
+    background-color: #6f1a07;
+    color: #2FC284;
+    cursor: inherit;
+}
+.pag-link:active > a,
+.pag-link:hover > a,
+.pag-link:focus > a {
+    background-color: #2FC284;
+    border-color: #4d1e10;
+    color: #ecded5;
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->   
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a style = "color: #2FC284" class = "navbar-link" href="homepagelayout.html">
+        <span class="glyphicon glyphicon-home"></span>  Home
+      </a>
+      <a style = "color: #2FC284" class = "navbar-link" href ="userprofile.html">
+        <i class="fa-regular fa-id-card"></i>  User Profile
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a style = "color: #F1b498" class = "navbar-link" href="patientlookup.html"><i class="fa-solid fa-hospital-user"></i>Patient Lookup</a></li>
+        <li><a style = "color: #F1b498" class = "navbar-link" href="prescriberlu.html"><i class="fa-solid fa-user-doctor"></i>Prescriber Lookup</a></li>
+        <li><a style = "color: #F1b498" class = "navbar-link" href="inventory.html"><i class="fa-solid fa-warehouse"></i>Inventory</a></li>
+      </ul>
+    </div>
+  </div>
+</nav> 
+            <div class="container-fluid bg-4">
+                  
+                    <div class="table-responsive">
+                      <table class= "table table-hover table-bordered">
+                    <tr>
+                      <h1 class="text-center" style = "color: #F1b498"><i class="fa-solid fa-warehouse"></i>  patients</h1> 
+                    </tr>
+            <hr>
+            <tr>
+              <input id="myInput" type="text" name = "search" placeholder="Search Patient Profiles..">
+            </tr>
+            <thead>
+              <tr>
+                <th>Modify Profile</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>DOB</th>
+                <th>Street Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Zip Code</th>
+                <th>E-mail address</th>
+                <th>Phone Number</th>
+                <th>Insurance</th>
+                <th>Allergies</th>
+                <th>Prescriptions</th>
+                <th>Auto Fill</th>
+                <th>Lead Source</th>
+              </tr>
+            </thead>
+            <tbody id="myTable">
+            <tr>
+              <td><a href= "#" class="btn btn-sm btn-primary btn-block" role="button">Update</a></td>
+              <td>Sacha Wynett</td>
+              <td>Female</td>
+              <td>01-01-1977</td>
+              <td>45 Shopko Avenue </td>
+              <td>Helsingborgs</td>
+              <td>MI</td>
+              <td>25436</td>
+              <td>wynett0@jigsy.com</td>
+              <td>(886)845-1778</td>
+              <td>Torp-Fisher</td>
+              <td>ZINC OXIDE</td>
+              <td>lasix</td> 
+              <td>Yes</td>
+              <td>E-mail</td>
+            </tr>
+            <tr>
+              <td><a href= "#" class="btn btn-sm btn-primary btn-block" role="button">Update</a></td>
+              <td>Zarla Poundsford</td>
+              <td>Female</td>
+              <td>02-05-1945</td>
+              <td>62901 Northview Pass</td>
+              <td>Lyubar</td>
+              <td>PA</td>
+              <td>25436</td>
+              <td>zpoundsford1@buzzfeed.com</td>
+              <td>(953)564-0347</td>
+              <td>Hilpert-Blick</td>
+              <td>Doxazosin Mesylate</td>
+              <td>Eliquis</td> 
+              <td>No</td>
+              <td>Social Media</td>
+            </tr>
+            <tr>
+              <td><a href= "#" class="btn btn-sm btn-primary btn-block" role="button">Update</a></td>
+              <td>Colene Pocklington</td>
+              <td>Female</td>
+              <td>08-03-1982</td>
+              <td>9418 Bartelt Trail</td>
+              <td>Alue Glumpang</td>
+              <td>OK</td>
+              <td>25478</td>
+              <td>cpocklington2@t-online.de</td>
+              <td>(373)-802-5682</td>
+              <td>Homeopathic Liquid</td>
+              <td>ReHydration</td>
+              <td>Adderal</td> 
+              <td>Yes</td>
+              <td>Social Media</td>
+            </tr>
+            <tr>
+              <td><a href= "#" class="btn btn-sm btn-primary btn-block" role="button">Update</a></td>
+              <td>Louise Kimmitt</td>
+              <td>Male</td>
+              <td>09-06-2002</td>
+              <td>86791 Fairview Way</td>
+              <td>Binzhou</td>
+              <td>AL</td>
+              <td>75869</td>
+              <td>ckimmitt3@naver.com</td>
+              <td>(533)-471-8369</td>
+              <td>Schaefer-Muller</td>
+              <td>Penicillin</td>
+              <td>Vitamin d3</td> 
+              <td>No</td>
+              <td>Flyer</td>
+            </tr>
+            <tr>
+              <td><a href= "#" class="btn btn-sm btn-primary btn-block" role="button">Update</a></td>
+              <td>Ker Crinkley</td>
+              <td>Male</td>
+              <td>10-06-2012</td>
+              <td>861 Spohn Hill</td>
+              <td>Blon</td>
+              <td>OH</td>
+              <td>42536</td>
+              <td>ebraunston4@youtu.be</td>
+              <td>(489)-802-7616</td>
+              <td>Nikolaus LLC</td>
+              <td>Heparin Sodium</td>
+              <td>Jentadueto XR</td> 
+              <td>Yes</td>
+              <td>In Person</td>
+            </tr>
+            <tr>
+              <td><a href= "#" class="btn btn-sm btn-primary btn-block" role="button">Update</a></td>
+              <td>Elvin Braunston</td>
+              <td>Male</td>
+              <td>10-06-2012</td>
+              <td>861 Spohn Hill</td>
+              <td>Blon</td>
+              <td>OH</td>
+              <td>42536</td>
+              <td>ebraunston4@youtu.be</td>
+              <td>(489)-802-7616</td>
+              <td>Nikolaus LLC</td>
+              <td>Heparin Sodium</td>
+              <td>Jentadueto XR</td> 
+              <td>Yes</td>
+              <td>In Person</td>
+            </tr>
+            <tr>
+              <td><a href= "#" class="btn btn-sm btn-primary btn-block" role="button">Update</a></td>
+              <td>Elyn Huetson</td>
+              <td>Female</td>
+              <td>11-07-2001</td>
+              <td>369 Maryland Point</td>
+              <td>Cincinnati</td>
+              <td>OH</td>
+              <td>45228</td>
+              <td>hhonack0@sogou.com</td>
+              <td>(513) 463-3147</td>
+              <td>Nikolaus LLC</td>
+              <td>Heparin Sodium</td>
+              <td>Jentadueto XR</td> 
+              <td>Yes</td>
+              <td>In Person</td>
+            </tr>
+            <tr>
+              <td><a href= "#" class="btn btn-sm btn-primary btn-block" role="button">Update</a></td>
+              <td>Benedikta Deniset</td>
+              <td>Female</td>
+              <td>11-07-2001</td>
+              <td>4 Lakewood Gardens Road</td>
+              <td>Virginia Beach</td>
+              <td>VA</td>
+              <td>23459</td>
+              <td>bdeniset1@blogspot.com</td>
+              <td>(757)-860-0116</td>
+              <td>Nikolaus LLC</td>
+              <td>Heparin Sodium</td>
+              <td>Jentadueto XR</td> 
+              <td>Yes</td>
+              <td>In Person</td>
+            </tr>
+            <tr>
+              <td><a href= "#" class="btn btn-sm btn-primary btn-block" role="button">Update</a></td>
+              <td>Sharleen Stango</td>
+              <td>Female</td>
+              <td>05-05-1979</td>
+              <td>00 Grayhawk Drive</td>
+              <td>Santa Barbara</td>
+              <td>CA</td>
+              <td>93111</td>
+              <td>cbulluck2@berkeley.edu</td>
+              <td>(702)- 817-4976</td>
+              <td>Nikolaus LLC</td>
+              <td>Heparin Sodium</td>
+              <td>Jentadueto XR</td> 
+              <td>Yes</td>
+              <td>In Person</td>
+            </tr>
+            <tr>
+              <td><a href= "#" class="btn btn-sm btn-primary btn-block" role="button">Update</a></td>
+              <td>Karly Gouch</td>
+              <td>Female</td>
+              <td>05-03-1976</td>
+              <td>00 Grayhawk Drive</td>
+              <td>Santa Barbara</td>
+              <td>CA</td>
+              <td>93111</td>
+              <td>cbulluck2@berkeley.edu</td>
+              <td>(702)- 817-4976</td>
+              <td>Nikolaus LLC</td>
+              <td>Heparin Sodium</td>
+              <td>Jentadueto XR</td> 
+              <td>Yes</td>
+              <td>In Person</td>
+            </tr>
+            <tr>
+              <td><a href= "#" class="btn btn-sm btn-primary btn-block" role="button">Update</a></td>
+              <td>Kathe Van der Kruijs</td>
+              <td>Female</td>
+              <td>05-03-1976</td>
+              <td>5672 South Hill</td>
+              <td>	Rochester</td>
+              <td>NY</td>
+              <td>14624</td>
+              <td>kvan6@nationalgeographic.com</td>
+              <td>(585)- 146-7172</td>
+              <td>Nikolaus LLC</td>
+              <td>Heparin Sodium</td>
+              <td>Jentadueto XR</td> 
+              <td>Yes</td>
+              <td>In Person</td>
+              </tr>
+              <tr>
+                <td><a href= "#" class="btn btn-sm btn-primary btn-block" role="button">Update</a></td>
+                  <td>John Lilki</td>
+                  <td>September 14, 2013</td>
+                  <td>jhlilk22@yahoo.com</td>
+                  <td>No</td>
+              </tr>
+              <tr>
+                <td><a href= "#" class="btn btn-sm btn-primary btn-block" role="button">Update</a></td>
+                  <td>John Lilki</td>
+                  <td>September 14, 2013</td>
+                  <td>jhlilk22@yahoo.com</td>
+                  <td>No</td>
+              </tr>
+              <tr>  
+                <td><a href= "#" class="btn btn-sm btn-primary btn-block" role="button">Update</a></td>               
+                  <td>John Lilki</td>
+                  <td>September 14, 2013</td>
+                  <td>jhlilk22@yahoo.com</td>
+                  <td>No</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>  
+        <div class="container">
+	        <div class="row">
+		        <ul class="pagination-custom text-center" style = "padding-top:50px">
+	            <li class="pag-link"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+              <li class="pag-link current"><span>1</span></li>
+	            <li class="pag-link"><a href="#">2</a></li>
+	            <li class="pag-link"><a href="#">3</a></li>
+	            <li class="pag-link"><a href="#">4</a></li>
+	            <li class="pag-link"><a href="#">5</a></li>
+	            <li class="pag-link"><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body> 
+<!--footer-->
+<footer style = "
+padding: 60px 50px;"
+class="container-fluid bg-3 text-center">
+  <p><a style = "color:#2FC284" href = "teamprofile.html">Contact the KAC Pharmacy Team</a></p>
+  <p>KAC Pharmacy &copy; 2023 </p> 
+  <p><a style = "color:#2FC284" href="https://www.tri-c.edu/programs/information-technology/programming-and-development/clevelandcodes.html">Cleveland Codes Software Developers Academy &copy; 2023</a></p> 
+</footer>
+</html>
