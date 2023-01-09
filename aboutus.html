@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>About Us</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/78fc201897.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/78fc201897.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<script>
+    $(document).ready(function() {
+    var panels = $('.user-infos');
+    var panelsButton = $('.dropdown-user');
+    panels.hide();
+
+    //Click dropdown
+    panelsButton.click(function() {
+        //get data-for attribute
+        var dataFor = $(this).attr('data-for');
+        var idFor = $(dataFor);
+
+        //current button
+        var currentButton = $(this);
+        idFor.slideToggle(400, function() {
+            //Completed slidetoggle
+            if(idFor.is(':visible'));
+        });
+    });
+  });
+  </script>
+    <style>
+  body {
+      font-size: 20px;
+      font-family: 'Times New Roman', Times, serif;
+      line-height: 2.0;
+      background-color: #955e42;
+      height: 100vh;
+  }
+  th {
+    box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+		-webkit-box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+		-moz-box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+    text-align: center;
+    font-size:large;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    background-color: #C5A49B;
+    color: #57393B;
+    
+}
+td {
+  background: #F1b498;
+  color: #955e42;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+}
+td > a {
+    color:#2FC284;
+  }
+  .table-responsive{
+      margin: 150px 200px 150px 200px;
+			background-color: #F1b498;
+			position: relative;
+			justify-content: center;
+			padding: 10px;
+			box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+			-webkit-box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+			-moz-box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+     
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+
+  .container {
+    padding-bottom: 30px; 
+    padding-top: 30px;
+  
+  }
+
+    .bg-3 { 
+    background-color: #553739; /* Dark Liver Horse */
+    color: #F1b498;
+  }
+    .bg-4 { 
+      background-color: #955e42; /* Brown Sugar */
+      color: #F1b498
+    }
+    .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 15px;
+      letter-spacing: 5px;
+      background-color:  #553739;
+      color: #EC9070;
+    }
+  .navbar .li {
+    border: 1px solid #6f1a07;
+    background-color: #4d1e10;
+    color: #2FC284;
+  }
+  .btn {
+  margin-top: 50px;
+  background-color: #C5A49B;
+    color: #57393B;
+  border-color: #2FC284;
+  border-radius: 3px;
+  transition: .2s;
+  font-size: x-large;
+  box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+			-webkit-box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+			-moz-box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+     
+}
+.btn:hover > a {
+ color: #57393B;
+}
+h1 {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #553739;
+    text-transform: uppercase;
+  }
+.container-fluid {
+  padding: 60px 50px;
+}
+.margin {
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+    .bg-3 { 
+    background-color: #553739; /* Dark Liver Horse */
+    color: #F1b498;
+  }
+  .bg-4 { 
+    background-color: #955e42; /* Brown Sugar */
+    color: #F1b498
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 15px;
+    letter-spacing: 5px;
+    background-color:  #553739;
+    color: #EC9070;
+  }
+.navbar .li {
+  border: 1px solid #6f1a07;
+  background-color: #4d1e10;
+  color: #2FC284;
+}		
+.navbar-link{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 16px;
+    line-height: 1.42857;
+    margin-right: 5px;
+    padding: 10px 17px;
+    position: relative;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    color: #2FC284;
+    cursor: pointer;
+}
+.btn {
+  padding: 5px;
+  background-color: #C5A49B;
+    color: #57393B;
+  border-color: #2FC284;
+  border-radius: 3px;
+  transition: .2s;
+  font-size: x-large;
+}
+.btn:hover > a {
+ color: #57393B;
+}
+
+
+  </style>
+</head>
+
+<!-- Navbar -->   
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a style = "color: #2FC284" class = "navbar-link" href="homepagelayout.html">
+          <span class="glyphicon glyphicon-home"></span>  Home
+        </a>
+        <a style = "color: #2FC284" class = "navbar-link" href ="userprofile.html">
+          <i class="fa-regular fa-id-card"></i>  User Profile
+        </a>
+        <a style = "color: #2FC284" class = "navbar-link" href ="aboutus.html">
+            <i class="fa fa-bullhorn" aria-hidden="true"></i> About Us
+          </a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a style = "color: #F1b498" class = "navbar-link" href="patientlookup.html"><i class="fa-solid fa-hospital-user"></i>Patient Lookup</a></li>
+          <li><a style = "color: #F1b498" class = "navbar-link" href="prescriberlu.html"><i class="fa-solid fa-user-doctor"></i>Prescriber Lookup</a></li>
+          <li><a style = "color: #F1b498" class = "navbar-link" href="inventory.html"><i class="fa-solid fa-warehouse"></i>Inventory</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav> 
+</div>
+</div>  
+<!-- MAIN CONTENT HERE -->
+<!-- Begin page content -->
+<div class="bg-4 container-fluid main-container">
+  <h1>Welcome to KAC Pharmacy</h1>
+  <h3>About Us</h3>
+  <p>KAC Pharmacy was designed by Katherine Simmons (UX/UI Designer), Clarence Cloud (Database Developer), and Alexander Stott  (Framework Developer). 
+    What is UX/UI design? 
+    User interface design or user interface engineering is the design of user interfaces for machines and software, such as computers, home appliances, mobile devices, and other electronic devices, with the focus on maximizing usability and the user experience.
+    What is database design?
+    Database design is the organization of data according to a database model. The designer determines what data must be stored and how the data elements interrelate. With this information, they can begin to fit the data to the database model. Database management system manages the data accordingly.
+    What is a framework?
+    A framework in programming is a tool that provides ready-made components or solutions that are customized in order to speed up development. A framework may include a library, but is defined by the principle of inversion control(IoC)
+    What is Web2py?
+    Web2py is an open-source web application framework written in the Python programming language. Web2py allows web developers to program dynamic web content using Python.
+    As students of the 14th cohort of the Cleveland Codes Software Developers Program. The KAC Pharmacy web application is the visual representation of the technical skills that were newly acquired or solidified throughout this 14-week intensive program. For this capstone we were split into a three-person team and tasked to create a Customer Relationship Management System. Customer relationship management is a process in which a business or other organization administers its interactions with customers. These systems typically utilize data analysis to study and create a targeted user experience based on large amounts of information. 
+    
+    <p>Our KAC Pharmacy CRM based on the concept of a mock mail order dose-pack distribution pharmacy similar to PillPack, a simplified pharmacy solution provided through Amazon Pharmacy. 
+    We achieved our CRM model through the utilization of Python, JavaScript/JQuery, Bootstrap, SQLi, <a href = "www.figma.com"> Figma </a>, and <a href = "www.mockaroo.com"> Mockaroo </a>. The KAC Pharmacy team made full use of GitHub and Visual Studio Code to manage the creation and modification of code being created for out project. Having organized all of our files in the shared repository, we were then able to transfer the code into the web2py framework, which was required for out capstone presentation. Our SQL databases were inclusive of random data created via the Mockaroo app and hardcoded data used created during the UX/UI design portion of our project. This data was read via SQlite into the web2py database framework.</p>
+    <br>
+    <p>We are a team of passionate developers committed to helping our customers. We pride ourselves on providing high-end
+    quality products and services that improve our customers’ lives. We strive to develop innovative solutions to everyday problems and help businesses
+    succeed. Our team is comprised of committed developers in the areas of, design, technology, and marketing. We are committed to delivering the best
+    customer experience possible. Our team is continually striving to improve our products and services to ensure our customers’ satisfaction. We value
+    customer feedback and take it seriously. We strive to create a positive customer experience and always strive to improve our products and
+    services to meet our customers’ needs. We invite you to explore our website and learn more about our products and services. If you have any
+    questions or feedback, we’d love to hear from you! Thank you for visiting our website!</p>
+</div>
+<!--footer-->
+<footer class="container-fluid bg-3 text-center">
+  <p>KAC Pharmacy &copy; 2023 </p> 
+  <p><a style = "color:#2FC284" href="https://www.tri-c.edu/programs/information-technology/programming-and-development/clevelandcodes.html">Cleveland Codes Software Developers Academy &copy; 2023</a></p> 
+</footer>
