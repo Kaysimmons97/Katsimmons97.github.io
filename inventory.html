@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Inventory</title>
+  <meta charset="utf-8">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/78fc201897.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://kit.fontawesome.com/78fc201897.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://kit.fontawesome.com/78fc201897.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script>
+  $('.pagination-inner a').on('click', function() {
+		$(this).siblings().removeClass('pagination-active');
+		$(this).addClass('pagination-active');
+})
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+ 
+<style>
+  body {
+          font-size: 20px;
+          font-family: 'Times New Roman', Times, serif;
+          line-height: 2.0;
+          background-color: #955e42;
+          
+      }
+
+
+canvas {
+  height: 70%;
+}
+h1 {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #553739;
+    text-transform: uppercase;
+  }
+.margin {
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+.bg-2 { 
+    background-color: #6f1a07; /* Rasin Black */
+    color: #f1bf98;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+ .bg-3 { 
+    background-color: #553739; /* Dark Liver Horse */
+    color: #F1b498;
+  }
+  .bg-4 { 
+    background-color: #955e42; /* Brown Sugar */
+    color: #F1b498
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 15px;
+    letter-spacing: 5px;
+    background-color:  #553739;
+    color: #EC9070;
+  }
+.navbar .li {
+  border: 1px solid #6f1a07;
+  background-color: #4d1e10;
+  color: #2FC284;
+}		
+.navbar-link{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 16px;
+    line-height: 1.42857;
+    margin-right: 5px;
+    padding: 10px 17px;
+    position: relative;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    color: #2FC284;
+    cursor: pointer;
+}
+  .btn {
+  padding: 5px;
+  background-color: #C5A49B;
+    color: #57393B;
+  border-color: #2FC284;
+  border-radius: 3px;
+  transition: .2s;
+  font-size: x-large;
+}
+.btn:hover > a {
+ color: #57393B;
+}
+  table {
+  margin: 50px;
+  color:  #4A2913;
+  background-color: #ecded5; 
+}
+thead{
+  text-align: center;
+    font-size:large;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    background-color: #C5A49B;
+    color: #57393B;
+}
+th {
+    text-align: center;
+    font-size:large;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    background-color: #C5A49B;
+    color: #57393B;
+}
+td {                                      padding:10px;                  
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: large;
+}     		
+.pag-link {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px;
+}
+.pag-link.disabled > span,
+.pag-link.current > span,
+.pag-link > a{
+    display: block;
+    border-radius: 50%;
+    font-size: 16px;
+    line-height: 1.42857;
+    margin-right: 5px;
+    padding: 10px 17px;
+    position: relative;
+    text-decoration: none;
+    border: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.pag-link:active > a,
+.pag-link:hover > a,
+.pag-link:focus > a,
+.pag-link.current > span{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+.pag-link > a{
+    background-color: #F1b498;
+    color: #553739;
+    cursor: pointer;
+}
+.pag-link.disabled > span,
+.pag-link.current > span{
+    background-color: #6f1a07;
+    color: #2FC284;
+    cursor: inherit;
+}
+.pag-link:active > a,
+.pag-link:hover > a,
+.pag-link:focus > a {
+    background-color: #2FC284;
+    border-color: #4d1e10;
+    color: #ecded5;
+}
+
+  </style>
+</head>
+<body>
+<!-- Navbar -->  
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a style = "color: #2FC284" class = "navbar-link" href="homepagelayout.html">
+        <span class="glyphicon glyphicon-home"></span>  Home
+      </a>
+      <a style = "color: #2FC284" class = "navbar-link" href ="userprofile.html">
+        <i class="fa-regular fa-id-card"></i>  User Profile
+      </a>
+      <a style = "color: #2FC284" class = "navbar-link" href ="aboutus.html">
+          <i class="fa fa-bullhorn" aria-hidden="true"></i> About Us
+        </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a style = "color: #F1b498" class = "navbar-link" href="patientlookup.html"><i class="fa-solid fa-hospital-user"></i>Patient Lookup</a></li>
+        <li><a style = "color: #F1b498" class = "navbar-link" href="prescriberlu.html"><i class="fa-solid fa-user-doctor"></i>Prescriber Lookup</a></li>
+        <li><a style = "color: #F1b498" class = "navbar-link" href="inventory.html"><i class="fa-solid fa-warehouse"></i>Inventory</a></li>
+      </ul>
+    </div>
+  </div>
+</nav> 
+</div>
+</div>  
+<div class="container-fluid bg-4" style =
+  "padding: 60px 50px;"
+>
+    <div class="table-responsive">
+      <table class= "table table-hover table-bordered">
+        <thead>
+          <tr>
+            <h1 class="text-center" style = "color: #F1b498"><i class="fa-solid fa-warehouse"></i>  Inventory</h1> 
+          </tr>
+          <tr>
+            <th>Update</th> 
+            <th>NDC Number</th>
+            <th>Brand Name</th>
+            <th>Generic Name</th>
+            <th>On-Hand</th>
+            <th>On Order</th>                
+          </tr>
+          </thead>   
+              <tbody>
+                <tr> 
+                  <td><a href= "#" class="btn btn-sm btn-primary btn-block" role="button">Update</a></td>
+                  <td>100</td>
+                  <td>100</td>               
+                  <td>Cymbalta</td>
+                  <td>100</td>
+                  <td>50</td> 
+                </tr>
+                <tr> 
+                  <td><a href= "#" class="btn btn-sm btn-primary btn-block" role="button">Update</a></td>  
+                  <td>100</td>
+                  <td>100</td>              
+                  <td>Gabapentin</td>
+                  <td>560</td>
+                  <td>0</td>          
+                </tr>
+                <tr> 
+                  <td><a href= "#" class="btn btn-sm btn-primary btn-block" role="button">Update</a></td>
+                  <td>100</td>
+                  <td>100</td>              
+                  <td>Lyrica</td>
+                  <td>150</td>
+                  <td>30</td>             
+                </tr>   
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>     
+             
+<div class = "bg-2 container-fluid" style = "padding:20px;">
+  <h2 style = "font-size: xx-large; text-align:center;"><i class="fa-sharp fa-solid fa-magnifying-glass-chart"></i>   Analysis</h2>
+  <div class = "row">
+      <div clas = "container-fluid" >
+        <canvas class = "col-md-4" id="myChart" style="width:33%;max-width:400px">
+        </canvas>
+          <script>
+          var xValues = ["Data Entry", "PV1", "Fill Station", "PV2", "To Be Shipped"];
+          var yValues = ["150", "75", "50", "60", "600"];
+          var barColors = [
+          "#b91d47",
+          "#00aba9",
+          "#2b5797",
+          "#e8c3b9",
+          "#1e7145"
+          ];
+  
+          new Chart("myChart", {
+            type: "pie",
+            data: {
+              labels: xValues,
+                  datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues,
+              }]
+            },
+            options: {
+              title: {
+                display: true,
+                text: "In Process",
+                fontColor:"#F1b498",
+                fontSize: 20
+              },
+            }
+          });
+      </script>
+      </div>
+      <div clas = "container-fluid">
+      <canvas class = "col-md-4" id="myChart1" style="width:33%;max-width:400px">
+      </canvas>
+      <script>
+        var myChart1 = document.getElementById("myChart1");
+        var dataEntryData = {
+          label: 'Data Entry',
+          data: [25, 35, 200, 150, 100],
+          backgroundColor: "#2FC284",
+          borderColor: "#4d1e10",
+          fontColor: "#553739",
+          yAxisID: "y-axis-data-entry"
+        };
+ 
+        var fillData = {
+          label: "Prescriptions Filled",
+          data: [15, 20, 100, 250, 107],
+          backgroundColor: "#C5A49B" ,
+          borderColor: "#57393B",
+          fontColor: "#553739",
+          yAxisID: "y-axis-fill"
+        };
+ 
+        var storeTeamData = {
+          labels: ["Samantha Sarah", "Jacob Jacobson","Jacoby Marin", "Dale Dillan", "Aubrey Alexander"],
+          datasets: [dataEntryData, fillData]
+        };
+ 
+        var chartOptions = {
+          scales: {
+          xAxes: [{
+            barPercentage: 1
+            }],
+          yAxes: [{
+            id: "y-axis-data-entry"
+            }, {
+            id: "y-axis-fill",
+            }]
+          }
+        };
+ 
+        var barChart = new Chart(myChart1, {
+          type: 'bar',
+          data: storeTeamData,
+          options: chartOptions
+        });
+        </script>
+        </div>
+        <div clas = " container-fluid">
+        <canvas class = "col-md-4" id="patientChart" style="width:33%;max-width:400px">
+        </canvas>
+        <script>
+          var patientChart = document.getElementById("patientChart");
+
+          var newPatients = {
+            label: "Number of Patients Onboarding",
+            data: [10, 45, 75, 62, 45, 55, 90, 150, 89, 120, 250, 375],
+            lineTension: 0,
+            fill: false,
+            borderColor: "#57393B"
+          };
+
+          var cycleData = {
+            label: "Patients in Scond Cycle",
+            data: [25, 50, 75, 120, 200, 220, 300, 350, 420, 500, 550, 700],
+            lineTension: 0,
+            fill: false,
+            borderColor: "#C5A49B"
+          };    
+
+          var monthlyData = {
+            labels: ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            datasets: [newPatients, cycleData]
+          };
+
+          var chartOptions = {
+            legend: {
+              display: true,
+              position: 'bottom',
+            labels: {
+              boxWidth: 60,
+              fontColor: "#553739"
+              }
+            }
+          };
+
+          var lineChart = new Chart(patientChart, {
+            type: 'line',
+            data: monthlyData,
+            options: chartOptions
+          });
+        </script>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+ 
+          <div class="container">
+	        <div class="row">
+		        <ul class="pagination-custom text-center" style = "padding-top:50px">
+	            <li class="pag-link"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+              <li class="pag-link current"><span>1</span></li>
+	            <li class="pag-link"><a href="#">2</a></li>
+	            <li class="pag-link"><a href="#">3</a></li>
+	            <li class="pag-link"><a href="#">4</a></li>
+	            <li class="pag-link"><a href="#">5</a></li>
+	            <li class="pag-link"><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body> 
+  <!--footer-->
+  <footer style = "
+  padding: 60px 50px;"
+  class="container-fluid bg-3 text-center">
+    <p><a style = "color:#2FC284" href = "teamprofile.html">Contact the KAC Pharmacy Team</a></p>
+    <p>KAC Pharmacy &copy; 2023 </p> 
+    <p><a style = "color:#2FC284" href="https://www.tri-c.edu/programs/information-technology/programming-and-development/clevelandcodes.html">Cleveland Codes Software Developers Academy &copy; 2023</a></p> 
+  </footer>
+</html>
+   
