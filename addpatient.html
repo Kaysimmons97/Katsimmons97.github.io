@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Data Entry</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/78fc201897.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/78fc201897.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+.card {
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: 1rem;
+}
+
+.card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.5rem 1.5rem;
+}
+      h1 {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #553739;
+    text-transform: uppercase;
+}
+
+  
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .margin {
+      margin-top: 45px;
+      margin-bottom: 45px;
+  }
+  body {
+      font-size: 20px;
+      font-family: 'Times New Roman', Times, serif;
+      line-height: 2.0;
+    }
+    p {
+      font-size: 20px;
+  }
+    .bg-1 { 
+      background-color: #F1b498; /* Peach */
+      color: #2FC284;
+    }
+    .bg-2 { 
+      background-color: #6f1a07; /* Rasin Black */
+      color: #f1bf98;
+      font-size: 15px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .bg-3 { 
+      background-color: #553739; /* Dark Liver Horse */
+      color: #F1b498;
+    }
+    .bg-4 { 
+      background-color: #955e42; /* Brown Sugar */
+      color: #F1b498
+    }
+    .bg-5 {
+      background-color: #748e45;
+      color: #232
+    }
+  
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 15px;
+      letter-spacing: 5px;
+      background-color:  #553739;
+      color: #EC9070;
+    }
+  .navbar .li {
+    border: 1px solid #6f1a07;
+    background-color: #4d1e10;
+    color: #2FC284;
+  }
+  
+    .btn {
+    margin-top: 50px;
+    background-color: #C5A49B;
+      color: #57393B;
+    border-color: #2FC284;
+    border-radius: 3px;
+    transition: .2s;
+    font-size: x-large;
+    box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+        -webkit-box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+        -moz-box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+       
+  }
+  .btn:hover > a {
+   color: #57393B;
+  }
+  
+  
+    </style>
+  </head>
+  
+  <!-- Navbar -->   
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a style = "color: #2FC284 " class = "navbar-link" href="index.html">
+          <span class="glyphicon glyphicon-home"></span>  Home
+        </a>
+        <a style = "color: #2FC284" class = "navbar-link" href ="userprofile.html">
+          <i class="fa-regular fa-id-card"></i>  User Profile
+        </a>
+        <a style = "color: #2FC284" class = "navbar-link" href ="aboutus.html">
+          <i class="fa fa-bullhorn" aria-hidden="true"></i> About Us
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a style = "color: #F1b498" class = "navbar-link" href="patientlookup.html"><i class="fa-solid fa-hospital-user"></i>Patient Lookup</a></li>
+          <li><a style = "color: #F1b498" class = "navbar-link" href="prescriberlu.html"><i class="fa-solid fa-user-doctor"></i>Prescriber Lookup</a></li>
+          <li><a style = "color: #F1b498" class = "navbar-link" href="inventory.html"><i class="fa-solid fa-warehouse"></i>Inventory</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>  
+
+
+   
+<div class="container-fluid">
+  <!-- Main content -->
+  <div class="row">
+    <!-- Left side -->
+  <div class = "container-fluid" style = "box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+  -webkit-box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+  -moz-box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black; margin-top: 50px;">
+    <div class="col-lg-8">
+      <!-- Basic information -->
+          <h3 class="h6">Basic information</h3>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="mb-3">
+                <label class="form-label">First name</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="mb-3">
+                <label class="form-label">Last name</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="mb-3">
+                <label class="form-label">Phone number</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Address -->
+      <div class="container-fluid bg-4" style = "box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+      -webkit-box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+      -moz-box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black; margin-top: 50px;">
+          <div class="table-responsive">
+            <table class= "table table-hover">
+              <div class="col-md-6"> 
+            <label class="form-label">Address Line 1</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class = "col-md-10"></div>
+            <label class="form-label">Address Line 2</label>
+            <input type="text" class="form-control">
+          </div>
+            <div class="col-lg-6">
+              <div class="mb-3">
+                <label class="form-label">State</label>
+                <select class="select2 form-control select2-hidden-accessible" data-select2-placeholder="Select state" data-select2-id="select2-data-4-680y" tabindex="-1" aria-hidden="true">
+                  <option data-select2-id="select2-data-6-cshs"></option>
+                  <option value="AL">Alabama</option>
+                  <option value="CA">California</option>
+                  <option value="DE">Delaware</option>
+                  <option value="FL">Florida</option>
+                  <option value="GA">Georgia</option>
+                  <option value="HI">Hawaii</option>
+                  <option value="ID">Idaho</option>
+                  <option value="KS">Kansas</option>
+              </div>
+            <div class="col-lg-6">
+              <div class="mb-3">
+                <label class="form-label">ZIP code</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            </div>
+            <div class="container">
+              <button class="btn btn-light btn-block btn-icon-text" style = "width: 40%; float:right;"><i class="bi bi-x"></i> <span class="text">Cancel</span></button>
+              <button class="btn btn-primary btn-block btn-icon-text" style = "width: 40%; float:left;"><i class="bi bi-save"></i> <span class="text">Save</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  </div>
+  <footer class="container-fluid bg-3 text-center">
+    <p><a style = "color:#2FC284" href = "teamprofile.html">Contact the KAC Pharmacy Team</a></p>
+    <p>KAC Pharmacy &copy; 2023 </p> 
+    <p><a style = "color:#2FC284" href="https://www.tri-c.edu/programs/information-technology/programming-and-development/clevelandcodes.html">Cleveland Codes Software Developers Academy &copy; 2023</a></p> 
+  </footer> 
+  
+  </body>
+  </html>

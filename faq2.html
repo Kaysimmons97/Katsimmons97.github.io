@@ -160,21 +160,39 @@ body {
     color: #F1b498
   }
   .navbar {
-      padding-top: 15px;
-      padding-bottom: 15px;
-      border: 0;
-      border-radius: 0;
-      margin-bottom: 0;
-      font-size: 15px;
-      letter-spacing: 5px;
-      background-color:  #553739;
-      color: #EC9070;
-    }
-  .navbar .li {
-    border: 1px solid #6f1a07;
-    background-color: #4d1e10;
-    color: #2FC284;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 15px;
+    letter-spacing: 5px;
+    background-color:  #553739;
+    color: #EC9070;
   }
+.navbar .li {
+  border: 1px solid #6f1a07;
+  background-color: #4d1e10;
+  color: #2FC284;
+}		
+.navbar-link{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 16px;
+    line-height: 1.42857;
+    margin-right: 5px;
+    padding: 10px 17px;
+    position: relative;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    color: #2FC284;
+    cursor: pointer;
+}
   .btn {
   margin-top: 50px;
   background-color: #C5A49B;
@@ -213,22 +231,25 @@ input[type=text] {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a style = "color: #2FC284" class = "navbar-link" href="http://127.0.0.1:8000/KACpharmacy/default/index">
+      <a style = "color: #2FC284" class = "navbar-link" href="index.html">
         <span class="glyphicon glyphicon-home"></span>  Home
       </a>
-      <a style = "color: #2FC284" class = "navbar-link" href ="http://127.0.0.1:8000/KACPharmacy/default/userList">
-        <i class="fa-regular fa-id-card"></i>  User List
+      <a style = "color: #2FC284" class = "navbar-link" href ="userprofile.html">
+        <i class="fa-regular fa-id-card"></i>  User Profile
       </a>
-        <a style = "color: #2FC284" class = "navbar-link" href ="http://127.0.0.1:8000/KACPharmacy/default/about">
+      <a style = "color: #2FC284" class = "navbar-link" href ="aboutus.html">
         <i class="fa fa-bullhorn" aria-hidden="true"></i> About Us
       </a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a style = "color: #F1b498" class = "navbar-link" href="http://127.0.0.1:8000/kacpharmacy/default/testdb"><i class="fa-solid fa-hospital-user"></i>Patient Lookup</a></li>
-        <li><a style = "color: #F1b498" class = "navbar-link" href="http://127.0.0.1:8000/KACpharmacy/default/prescriberLookup"><i class="fa-solid fa-user-doctor"></i>Prescriber Lookup</a></li>
-        <li><a style = "color: #F1b498" class = "navbar-link" href="http://127.0.0.1:8000/KACPharmacy/default/inventoryLookup"><i class="fa-solid fa-warehouse"></i>Inventory</a></li>
+        <li><a style = "color: #F1b498" class = "navbar-link" href="patientlookup.html"><i class="fa-solid fa-hospital-user"></i>Patient Lookup</a></li>
+        <li><a style = "color: #F1b498" class = "navbar-link" href="prescriberlu.html"><i class="fa-solid fa-user-doctor"></i>Prescriber Lookup</a></li>
+        <li><a style = "color: #F1b498" class = "navbar-link" href="inventory.html"><i class="fa-solid fa-warehouse"></i>Inventory</a></li>
       </ul>
+    </div>
+  </div>
+</nav>    
     </div>
   </div>
 </nav>  
@@ -355,11 +376,9 @@ input[type=text] {
     </div>
 </div>
 </body>
-<footer style = "
-padding: 60px 50px;"
-class="container-fluid bg-3 text-center">
+<footer style = "padding: 60px 50px;" class="container-fluid bg-3 text-center">
   <p><a style = "color:#2FC284" href = "teamprofile.html">Contact the KAC Pharmacy Team</a></p>
   <p>KAC Pharmacy &copy; 2023 </p> 
   <p><a style = "color:#2FC284" href="https://www.tri-c.edu/programs/information-technology/programming-and-development/clevelandcodes.html">Cleveland Codes Software Developers Academy &copy; 2023</a></p> 
-</footer>
+</footer> 
 </html>
