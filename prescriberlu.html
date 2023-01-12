@@ -113,6 +113,9 @@ h1 {
   border-radius: 3px;
   transition: .2s;
   font-size: x-large;
+  box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+			-webkit-box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+			-moz-box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
 }
 .btn:hover > a {
  color: #57393B;
@@ -120,6 +123,11 @@ h1 {
 #myInput {
     margin-left: 15%;
      
+}
+input #myinput  {
+  display: block;
+  margin-left: 15%;
+  width: 100%;
 }
 input[type=text] {
   width: 130px;
@@ -213,34 +221,32 @@ td {                                      padding:10px;
 
 <!-- Navbar -->   
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
+  <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a style = "color: #2FC284" class = "navbar-link" href="homepagelayout.html">
+      <a style = "color: #2FC284" class = "navbar-link" href="index.html">
         <span class="glyphicon glyphicon-home"></span>  Home
       </a>
       <a style = "color: #2FC284" class = "navbar-link" href ="userprofile.html">
         <i class="fa-regular fa-id-card"></i>  User Profile
       </a>
       <a style = "color: #2FC284" class = "navbar-link" href ="aboutus.html">
-          <i class="fa fa-bullhorn" aria-hidden="true"></i> About Us
-        </a>
+        <i class="fa fa-bullhorn" aria-hidden="true"></i> About Us
+      </a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a style = "color: #F1b498" class = "navbar-link" href="patientlookup.html"><i class="fa-solid fa-hospital-user"></i>Patient Lookup</a></li>
-        <li><a style = "color: #F1b498" class = "navbar-link" href="prescriberlu.html"><i class="fa-solid fa-user-doctor"></i>Prescriber Lookup</a></li>
+        <li><a style = "color: #71797E" class = "navbar-link" href="prescriberlu.html"><i class="fa-solid fa-user-doctor"></i>Prescriber Lookup</a></li>
         <li><a style = "color: #F1b498" class = "navbar-link" href="inventory.html"><i class="fa-solid fa-warehouse"></i>Inventory</a></li>
       </ul>
     </div>
   </div>
 </nav> 
-</div>
-</div>  
 <div class="container-fluid bg-4">
   <div class="table-responsive">
     <table class= "table table-hover table-bordered">
@@ -456,14 +462,11 @@ td {                                      padding:10px;
 </div>
 </body> 
 <!--footer-->
-<footer style = "
-padding: 60px 50px;"
-class="container-fluid bg-3 text-center">
+<footer style = "padding: 60px 50px;" class="container-fluid bg-3 text-center">
   <p><a style = "color:#2FC284" href = "teamprofile.html">Contact the KAC Pharmacy Team</a></p>
   <p>KAC Pharmacy &copy; 2023 </p> 
   <p><a style = "color:#2FC284" href="https://www.tri-c.edu/programs/information-technology/programming-and-development/clevelandcodes.html">Cleveland Codes Software Developers Academy &copy; 2023</a></p> 
-</footer>
-</html>
+</footer>  
 
   
   

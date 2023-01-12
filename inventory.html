@@ -222,32 +222,33 @@ td {                                      padding:10px;
 <body>
 <!-- Navbar -->  
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
+  <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a style = "color: #2FC284" class = "navbar-link" href="homepagelayout.html">
+      <a style = "color: #2FC284" class = "navbar-link" href="index.html">
         <span class="glyphicon glyphicon-home"></span>  Home
       </a>
       <a style = "color: #2FC284" class = "navbar-link" href ="userprofile.html">
         <i class="fa-regular fa-id-card"></i>  User Profile
       </a>
       <a style = "color: #2FC284" class = "navbar-link" href ="aboutus.html">
-          <i class="fa fa-bullhorn" aria-hidden="true"></i> About Us
-        </a>
+        <i class="fa fa-bullhorn" aria-hidden="true"></i> About Us
+      </a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a style = "color: #F1b498" class = "navbar-link" href="patientlookup.html"><i class="fa-solid fa-hospital-user"></i>Patient Lookup</a></li>
         <li><a style = "color: #F1b498" class = "navbar-link" href="prescriberlu.html"><i class="fa-solid fa-user-doctor"></i>Prescriber Lookup</a></li>
-        <li><a style = "color: #F1b498" class = "navbar-link" href="inventory.html"><i class="fa-solid fa-warehouse"></i>Inventory</a></li>
+        <li><a style = "color: #71797E" class = "navbar-link" href="inventory.html"><i class="fa-solid fa-warehouse"></i>Inventory</a></li>
       </ul>
     </div>
   </div>
-</nav> 
+</nav>    
+  
 </div>
 </div>  
 <div class="container-fluid bg-4" style =
@@ -302,8 +303,8 @@ td {                                      padding:10px;
 <div class = "bg-2 container-fluid" style = "padding:20px;">
   <h2 style = "font-size: xx-large; text-align:center;"><i class="fa-sharp fa-solid fa-magnifying-glass-chart"></i>   Analysis</h2>
   <div class = "row">
-      <div clas = "container" >
-        <canvas class = "col-md-4" id="myChart" style = "width:100%; max-width:400px;">
+      <div clas = "container-fluid" >
+        <canvas class = "col-md-4" id="myChart" style="width:33%;max-width:400px">
         </canvas>
           <script>
           var xValues = ["Data Entry", "PV1", "Fill Station", "PV2", "To Be Shipped"];
@@ -336,8 +337,8 @@ td {                                      padding:10px;
           });
       </script>
       </div>
-      <div clas = "container">
-      <canvas class = "col-md-4" id="myChart1" style = "width:100%;max-width:400px;">
+      <div clas = "container-fluid">
+      <canvas class = "col-md-4" id="myChart1" style="width:33%;max-width:400px">
       </canvas>
       <script>
         var myChart1 = document.getElementById("myChart1");
@@ -384,8 +385,8 @@ td {                                      padding:10px;
         });
         </script>
         </div>
-        <div clas = "container">
-        <canvas class = "col-md-4" id="patientChart" style = "width:100%;max-width:400px;">
+        <div clas = " container-fluid">
+        <canvas class = "col-md-4" id="patientChart" style="width:33%;max-width:400px">
         </canvas>
         <script>
           var patientChart = document.getElementById("patientChart");
@@ -456,12 +457,10 @@ td {                                      padding:10px;
   </div>
 </body> 
   <!--footer-->
-  <footer style = "
-  padding: 60px 50px;"
-  class="container-fluid bg-3 text-center">
+  <footer style = "padding: 60px 50px;" class="container-fluid bg-3 text-center">
     <p><a style = "color:#2FC284" href = "teamprofile.html">Contact the KAC Pharmacy Team</a></p>
     <p>KAC Pharmacy &copy; 2023 </p> 
     <p><a style = "color:#2FC284" href="https://www.tri-c.edu/programs/information-technology/programming-and-development/clevelandcodes.html">Cleveland Codes Software Developers Academy &copy; 2023</a></p> 
-  </footer>
+  </footer> 
 </html>
    
