@@ -290,22 +290,6 @@ td {                                      padding:10px;
               <tbody>
                 <tr> 
                   <td><a href= "#" class="btn btn-sm btn-primary btn-block" role="button">Update</a></td>
-                  <td>100</td>
-                  <td>100</td>               
-                  <td>Cymbalta</td>
-                  <td>100</td>
-                  <td>50</td> 
-                </tr>
-                <tr> 
-                  <td><a href= "#" class="btn btn-sm btn-primary btn-block" role="button">Update</a></td>  
-                  <td>100</td>
-                  <td>100</td>              
-                  <td>Gabapentin</td>
-                  <td>560</td>
-                  <td>0</td>          
-                </tr>
-                <tr> 
-                  <td><a href= "#" class="btn btn-sm btn-primary btn-block" role="button">Update</a></td>
                   <td>43353-0413-53</td>
                   <td>Aphena Pharma Solutions - Tennessee, LLC</td>
                   <td>Lyrica 150mg</td>              
@@ -442,11 +426,11 @@ td {                                      padding:10px;
           </div>
         </div>    
              
-<div class = "bg-2 container-fluid" style = "padding:20px;">
+<div class = "bg-2 container-fluid">
   <h2 style = "font-size: xx-large; text-align:center;"><i class="fa-sharp fa-solid fa-magnifying-glass-chart"></i>   Analysis</h2>
   <div class = "row">
-      <div class = "container-fluid text-center" >
-        <canvas class = "col-md-4" id="myChart" style="width:100%;max-width:400px">
+      <div class="chart-container" style="position: relative; height:40vh; width:80vw;">
+        <canvas id="myChart">
         </canvas>
           <script>
           var xValues = ["Data Entry", "PV1", "Fill Station", "PV2", "To Be Shipped"];
@@ -466,6 +450,7 @@ td {                                      padding:10px;
                   datasets: [{
                     backgroundColor: barColors,
                     data: yValues,
+                    color: "#EAFFDA"
               }]
             },
             options: {
@@ -479,8 +464,8 @@ td {                                      padding:10px;
           });
       </script>
       </div>
-      <div class = "container-fluid text-center">
-      <canvas class = "col-md-4" id="myChart1" style="width:100%;max-width:400px">
+      <div class="chart-container" style="position: relative; height:40vh; width:80vw;">
+      <canvas id="myChart1">
       </canvas>
       <script>
         var myChart1 = document.getElementById("myChart1");
@@ -489,7 +474,7 @@ td {                                      padding:10px;
           data: [25, 35, 200, 150, 100],
           backgroundColor: "#2FC284",
           borderColor: "#4d1e10",
-          fontColor: "#553739",
+          fontColor: "#EAFFDA",
           yAxisID: "y-axis-data-entry"
         };
  
@@ -498,12 +483,13 @@ td {                                      padding:10px;
           data: [15, 20, 100, 250, 107],
           backgroundColor: "#C5A49B" ,
           borderColor: "#57393B",
-          fontColor: "#553739",
+          fontColor: "#EAFFDA",
           yAxisID: "y-axis-fill"
         };
  
         var storeTeamData = {
           labels: ["Samantha Sarah", "Jacob Jacobson","Jacoby Marin", "Dale Dillan", "Aubrey Alexander"],
+          fontColor: "#9AC2C5",
           datasets: [dataEntryData, fillData]
         };
  
@@ -527,8 +513,8 @@ td {                                      padding:10px;
         });
         </script>
         </div>
-        <div class = " container-fluid text-center">
-        <canvas class = "col-md-4" id="patientChart" style="width:100%;max-width:400px">
+        <div class="chart-container" style="position: relative; height:40vh; width:80vw;">
+        <canvas id="patientChart">
         </canvas>
         <script>
           var patientChart = document.getElementById("patientChart");
@@ -538,7 +524,8 @@ td {                                      padding:10px;
             data: [10, 45, 75, 62, 45, 55, 90, 150, 89, 120, 250, 375],
             lineTension: 0,
             fill: false,
-            borderColor: "#57393B"
+            borderColor: "#57393B",
+            fontColor: "#EAFFDA"
           };
 
           var cycleData = {
@@ -546,11 +533,14 @@ td {                                      padding:10px;
             data: [25, 50, 75, 120, 200, 220, 300, 350, 420, 500, 550, 700],
             lineTension: 0,
             fill: false,
-            borderColor: "#C5A49B"
+            borderColor: "#C5A49B",
+            fontColor: "#EAFFDA"
+      
           };    
 
           var monthlyData = {
             labels: ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            fontColor: "#9AC2C5",
             datasets: [newPatients, cycleData]
           };
 
