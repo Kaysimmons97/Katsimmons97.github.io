@@ -139,6 +139,24 @@ h1 {
 .btn:hover > a {
  color: #57393B;
 }
+#myInput {
+    margin-left: 15%;
+     
+}
+
+input #myinput  {
+  display: block;
+  margin-left: 15%;
+  width: 100%;
+}
+input[type=text] {
+  width: 130px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+input[type=text]:focus {
+  width: 75%;
+}
   table {
   margin: 50px;
   color:  #4A2913;
@@ -260,6 +278,7 @@ td {                                      padding:10px;
           <tr>
             <h1 class="text-center" style = "color: #F1b498"><i class="fa-solid fa-warehouse"></i>  Inventory</h1> 
           </tr>
+	  <tr>  <input id="myInput" type="text" name = "search" placeholder="Search Inventory.."> </tr>
           <tr>
             <th>Update</th> 
             <th>NDC Number</th>
@@ -297,8 +316,7 @@ td {                                      padding:10px;
               </tbody>
             </table>
           </div>
-        </div>
-      </div>     
+        </div>    
              
 <div class = "bg-2 container-fluid" style = "padding:20px;">
   <h2 style = "font-size: xx-large; text-align:center;"><i class="fa-sharp fa-solid fa-magnifying-glass-chart"></i>   Analysis</h2>
