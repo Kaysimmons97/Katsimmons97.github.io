@@ -142,7 +142,7 @@ td > a {
   li > a {
 	color:#2FC284;
   }
-  .table-responsive{
+  .table{
       margin: 75px 100px 75px 100px;
 			background-color: #F1b498;
 			position: relative;
@@ -300,21 +300,6 @@ input[type=text]:focus {
 								<label style="margin-right: 8px;" class="">
 									<div class="icheckbox_square-blue" style="position: relative;"><input type="checkbox" id="check-all" class="icheck" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
 								</label>
-								<div class="btn-group">
-									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-										Action <span class="caret"></span>
-									</button>
-									<ul class="dropdown-menu" role="menu">
-										<li><a href="#">Mark as read</a></li>
-										<li><a href="#">Mark as unread</a></li>
-										<li><a href="#">Mark as important</a></li>
-										<li class="divider"></li>
-										<li><a href="#">Report spam</a></li>
-										<li><a href="#">Delete</a></li>
-									</ul>
-								</div>
-							</div>
-
 							<div class="col-md-6 search-form" style = "margin-top:50px;">
 								<div class="text-right">
 									<div class="input-group"><input id="myInput" type="text" name = "search" placeholder="Filter Emails..">
@@ -327,6 +312,23 @@ input[type=text]:focus {
 						
 						<div class="table-responsive">
 							<table class="table">
+								<thead>
+									<th>
+										<div class="btn-group">
+											<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+												Action <span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu" role="menu">
+												<li><a href="#">Mark as read</a></li>
+												<li><a href="#">Mark as unread</a></li>
+												<li><a href="#">Mark as important</a></li>
+												<li class="divider"></li>
+												<li><a href="#">Report spam</a></li>
+												<li><a href="#">Delete</a></li>
+											</ul>
+										</div>
+									</th>
+								</thead>
 								<tbody><tr>
 									<td class="action"><input type="checkbox" /></td>
 									<td class="action"><i class="fa fa-star-o"></i></td>
