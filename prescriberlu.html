@@ -257,7 +257,6 @@ td {                                      padding:10px;
       <tr>
         <input id="myInput" type="text" name = "search" placeholder="Search Prescriber Profiles..">
       </tr>
-            <thead>
               <thead>
                 <tr>
                     <th>Modify Profile</th>
@@ -442,11 +441,9 @@ td {                                      padding:10px;
               <td>(886)845-1778</td>
             </tr>
           </tbody>
-        </table>
-      </div>  
-      <div class="container text-center">
-	      <div class="row">
-		      <ul class="pagination-custom text-center" style = "padding-top:50px">
+          <tfoot>
+            <tr>
+		        <td colspan="6"> <ul class="pagination-custom text-center" style = "padding-top:50px">
 	          <li class="pag-link"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
             <li class="pag-link current"><span>1</span></li>
 	          <li class="pag-link"><a href="#">2</a></li>
@@ -454,7 +451,10 @@ td {                                      padding:10px;
 	          <li class="pag-link"><a href="#">4</a></li>
 	          <li class="pag-link"><a href="#">5</a></li>
 	          <li class="pag-link"><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
-          </ul>
+          </ul></td>
+          </tr>
+          </tfoot>
+        </table>
         </div>
       </div>
     </div>
