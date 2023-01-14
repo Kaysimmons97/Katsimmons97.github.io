@@ -109,6 +109,36 @@ $(document).ready(function(){
     border-color: #4d1e10;
     color: #ecded5;
 }
+.panel-teal .panel-heading {
+    background-color: #955e42;
+    border: 1px solid #955e42;
+    color: #F1b498;
+}
+
+.panel .panel-heading {
+    padding: 5px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-bottom: 1px solid #DDD;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.panel .panel-heading .panel-title {
+    padding: 10px;
+    font-size: 17px;
+}
+
+form .form-group {
+    position: relative;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.inner-all {
+    padding: 10px;
+}
   body {
       font-size: 20px;
       font-family: 'Times New Roman', Times, serif;
@@ -301,13 +331,63 @@ input[type=text]:focus {
 								<label style="margin-right: 8px;" class="">
 									<div class="icheckbox_square-blue" style="position: relative;"><input type="checkbox" id="check-all" class="icheck" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
 								</label>
-							
+							<div class="panel-sub-heading inner-all">
+								<div class="pull-left">
+									<ul class="list-inline no-margin">
+										<li>
+											<div class="ckbox ckbox-theme">
+												<input id="checkbox-group" type="checkbox" class="mail-group-checkbox">
+												<label for="checkbox-group"></label>
+											</div>
+										</li>
+										<li>
+											<div class="btn-group">
+												<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+													All <span class="caret"></span>
+												</button>
+												<ul class="dropdown-menu" role="menu">
+													<li><a href="#">None</a></li>
+													<li><a href="#">Read</a></li>
+													<li><a href="#">Unread</a></li>
+												</ul>
+											</div>
+										</li>
+										<li>
+											<div class="btn-group">
+												<button class="btn btn-default btn-sm tooltips" type="button" data-toggle="tooltip"
+													data-container="body" title="" data-original-title="Archive"><i
+														class="fa fa-inbox"></i></button>
+												<button class="btn btn-default btn-sm tooltips" type="button" data-toggle="tooltip"
+													data-container="body" title="" data-original-title="Report Spam"><i
+														class="fa fa-warning"></i></button>
+												<button class="btn btn-default btn-sm tooltips" type="button" data-toggle="tooltip"
+													data-container="body" title="" data-original-title="Delete"><i
+														class="fa fa-trash-o"></i></button>
+											</div>
+										</li>
+										<li class="hidden-xs">
+											<div class="btn-group">
+												<button type="button" class="btn btn-default btn-sm">More</button>
+												<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+													<span class="caret"></span>
+													<span class="sr-only">Toggle Dropdown</span>
+												</button>
+												<ul class="dropdown-menu" role="menu">
+													<li><a href="#"><i class="fa fa-edit"></i> Mark as read</a></li>
+													<li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
+													<li class="divider"></li>
+													<li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 						
-						<div class="padding"></div>
+						<div class="panel-body no-padding">
 						
-						<div class="table-responsive" style = "margin-top:75px">
+						<div class="table-responsive">
 							<table class="table">
 								<thead>
 									<th>
